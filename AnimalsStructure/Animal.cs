@@ -5,11 +5,10 @@ using System.Text;
 using System.Threading.Tasks;
 
 using AnimalsStructure.StructureOfClasses;
-namespace AnimalsStructure
-    
+namespace AnimalsStructure   
 {
     internal class Animal
-    { 
+    {
         public View _view { get; set; }
         public Genus _genus { get; set; }
         public Family _family { get; set; }
@@ -19,9 +18,7 @@ namespace AnimalsStructure
         public Kingdom _kingdom { get; set; }
         public Domain _domain { get; set; }
         public Live _live { get; set; }
-
         private string _animalName { get; set; }
-
         public Animal(View view, Genus genus,Family family,Order order,Classes classes,Department department,Kingdom kingdom, Domain domain,Live live)
         {
             _view = view;
@@ -33,17 +30,11 @@ namespace AnimalsStructure
             _kingdom = kingdom;
             _domain = domain;
             _live = live;          
-        }
-        List<string> animalNames = new List<string>()
-        {
-        };
-
+        }       
         public void AddAnimalName(string animalName)
-        {
-             animalNames.Add(animalName);
-            _animalName = animalNames[0];
+        {            
+           _animalName = animalName;
         }
-
         public override string ToString()
         {
             return $"Имя:   {_animalName}\n" +
@@ -57,6 +48,5 @@ namespace AnimalsStructure
                 $"Домен: {_domain}\n"+
                 $"Жизнь: {_kingdom}\n";
         }
-
     }
 }
